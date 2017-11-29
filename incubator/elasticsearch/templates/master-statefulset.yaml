@@ -112,6 +112,8 @@ spec:
         - mountPath: /usr/share/elasticsearch/config/logging.yml
           name: config
           subPath: logging.yml
+      nodeSelector:
+        node-pool-name: infrastructure
       volumes:
       - name: config
         configMap:

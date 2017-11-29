@@ -73,3 +73,6 @@ data:
 ## Install Default RBAC roles and bindings
 rbac:
   create: false
+
+# Set the node selector for the install
+nodeSelector: {}

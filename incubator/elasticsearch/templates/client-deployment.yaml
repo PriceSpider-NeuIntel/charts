@@ -17,6 +17,9 @@ spec:
         component: "{{ .Values.client.name }}"
         release: {{ .Release.Name }}
     spec:
+      nodeSelector:
+        node-pool-name: infrastructure
+
       serviceAccountName: {{ template "elasticsearch.fullname" . }}
       {{- if eq .Values.client.antiAffinity "hard" }}
       affinity:

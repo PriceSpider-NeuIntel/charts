@@ -116,6 +116,8 @@ spec:
             exec:
               command: ["/bin/bash","/pre-stop-hook.sh"]
       terminationGracePeriodSeconds: {{ .Values.data.terminationGracePeriodSeconds }}
+      nodeSelector:
+        node-pool-name: infrastructure
       volumes:
       - name: config
         configMap:
